@@ -1,3 +1,4 @@
+import pandas as pd
 def load_and_preview_data(file_path):
     try:
         # Load the data
