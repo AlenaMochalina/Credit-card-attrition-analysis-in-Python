@@ -20,3 +20,5 @@ def load_and_preview_data(file_path):
     
     # Zobrazíme rozměry dat (počet řádků a sloupců)
     print(f"\nShape of the dataset: {data.shape}")
+
+    return data
