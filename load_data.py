@@ -1,13 +1,9 @@
 import pandas as pd
 
-# Definujeme funkci znovu, nyní s importovanou knihovnou pandas
+# Definujeme funkci pro načtení a náhled dat
 def load_and_preview_data(file_path):
     # Načteme data
     data = pd.read_csv(file_path)
-    
-    # Zobrazíme první řádky dat
-    print("First 5 rows of the dataset:")
-    print(data.head())
     
     # Zobrazíme základní informace o datech
     print("\nInfo about the dataset:")
@@ -24,6 +20,3 @@ def load_and_preview_data(file_path):
     
     # Zobrazíme rozměry dat (počet řádků a sloupců)
     print(f"\nShape of the dataset: {data.shape}")
-    
-    return data
-
