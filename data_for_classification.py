@@ -20,7 +20,7 @@ def preprocess_for_classification(data):
         'CLIENTNUM', 
         'Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_WalkIn_Delta_2',
         'Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_WalkIn_Delta_1'
-    ])
+    ],errors='ignore')
     
     # Inicializujeme LabelEncodery pro každý kategoriální sloupec
     label_encoders = {}
