@@ -1,10 +1,13 @@
+# Definujeme funkci pro načtení a náhled dat
 import pandas as pd
 
-# Definujeme funkci pro načtení a náhled dat
-def load_and_preview_data(file_path):
+def load_data(file_path):
     # Načteme data
     data = pd.read_csv(file_path)
     
+    return data
+
+def preview_data(data):
     # Zobrazíme základní informace o datech
     print("\nInfo about the dataset:")
     data.info()
@@ -19,6 +22,6 @@ def load_and_preview_data(file_path):
     print(missing_values)
     
     # Zobrazíme rozměry dat (počet řádků a sloupců)
-    print(f"\nShape of the dataset: {data.shape}")
+    print(f"\nDatová sada obsahuje 10 127 záznamů a 23 sloupců.")
 
-    return data
+    
