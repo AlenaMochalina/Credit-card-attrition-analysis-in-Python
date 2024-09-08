@@ -44,9 +44,3 @@ def preprocess_for_classification(data):
     data[numeric_columns] = scaler.fit_transform(data[numeric_columns])
     
     return data, label_encoders, scaler
-
-
-data= pd.read_csv("BankChurners.csv") 
-processed_data, label_encoders, scaler = preprocess_for_classification(data)
-
-print(processed_data.head())  
