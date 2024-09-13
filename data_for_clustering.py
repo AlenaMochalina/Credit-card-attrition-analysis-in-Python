@@ -1,33 +1,36 @@
-from sklearn.preprocessing import LabelEncoder, StandardScaler
+
+from sklearn.preprocessing import StandardScaler
 import pandas as pd
 
 def preprocess_for_clustering(data):
     """
     Funkce pro preprocessing dat pro shlukování.
-    - Kategoriální data se zakódují pomocí LabelEncoder.
+    - Kategoriální data se zakódují pomocí One-Hot Encoding.
     - Numerická data se standardizují pomocí StandardScaler.
     - Nepotřebné sloupce se odstraní.
     """
-    # Odstraníme nepotřebné sloupce a použijeme errors='ignore' pro případ, že některé sloupce neexistují
+    # Odstraníme nepotřebné sloupce
     data = data.drop(columns=[
         'CLIENTNUM', 
         'Attrition_Flag', 
         'Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1',
         'Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2'
-    ], errors='ignore')
+    ])
     
-    # Inicializujeme LabelEncodery pro každý kategoriální sloupec
-    label_encoders = {}
-    categorical_columns = data.select_dtypes(include=['object']).columns
-    
-    for column in categorical_columns:
-        label_encoder = LabelEncoder()
-        data[column] = label_encoder.fit_transform(data[column])
-        label_encoders[column] = label_encoder
+    # Použijeme One-Hot Encoding na kategoriální proměnné
+    data = pd.get_dummies(data, drop_first=True)
     
     # Standardizujeme numerická data
     scaler = StandardScaler()
     numeric_columns = data.select_dtypes(include=['int64', 'float64']).columns
     data[numeric_columns] = scaler.fit_transform(data[numeric_columns])
     
-    return data, label_encoders, scaler
+    return data, scaler
+
+# Načtení dat
+data = pd.read_csv(file_path)
+
+# Předzpracování dat
+processed_data, scaler = preprocess_for_clustering(data)
+
+print(processed_data.head())
