@@ -18,13 +18,13 @@ Shlukování: Segmentace zákazníků do skupin na základě podobných charakte
 Klasifikace: Predikce odchodu zákazníka (attrition) na základě dostupných dat.
 
 ## Klíčové výsledky
-Shlukování
+Shlukování:
 Nejvíce odcházejí ženy ve věku 43–50 let s nejnižšími příjmy.
 Na základě těchto zjištění mohou být zavedeny cílené retenční kampaně, například:
 Personalizované nabídky.
 Zlepšené služby.
 Speciální loajální programy.
-Klasifikace
+Klasifikace:
 Byl vytvořen model klasifikace, který dokáže identifikovat zákazníky s vysokou pravděpodobností odchodu. Tento model může sloužit jako nástroj pro cílené retenční strategie.
 
 ## Ukázka analýzy
