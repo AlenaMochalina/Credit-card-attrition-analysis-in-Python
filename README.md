@@ -3,8 +3,8 @@
 Tento projekt se zaměřuje na analýzu odchodu zákazníků pro společnost vydávající kreditní karty. Cílem je identifikovat klíčové faktory přispívající k úbytku zákazníků a poskytovat doporučení pro cílené retenční kampaně.
 
 ## Datová sada
-Datová sada obsahuje informace o zákaznících shromážděné z portfolia spotřebitelských kreditních karet. Jejím cílem je pomoci analytikům předvídat odchod zákazníků. Obsahuje:
-
+Datová sada obsahuje informace o zákaznících shromážděné z portfolia spotřebitelských kreditních karet. Jejím cílem je pomoci analytikům předvídat odchod zákazníků.
+Obsahuje:
 Demografické údaje: věk, pohlaví, rodinný stav a příjmová kategorie.
 Informace o vztahu zákazníka s poskytovatelem kreditní karty: typ karty, počet měsíců od registrace, období neaktivity.
 Chování zákazníků při výdajích: revolvingový zůstatek, úvěrový limit, průměrná míra nákupu.
@@ -15,6 +15,7 @@ Dataset byl získán z tohoto zdroje: https://zenodo.org/records/4322342#.Y8OsBd
 Pro zpracování dat jsme použili následující metody strojového učení:
 
 Shlukování: Segmentace zákazníků do skupin na základě podobných charakteristik.
+
 Klasifikace: Predikce odchodu zákazníka (attrition) na základě dostupných dat.
 
 ## Klíčové výsledky
